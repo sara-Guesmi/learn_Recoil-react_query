@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.IdentifiyContainer {
+  background: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.IdentifiyContainer::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  z-index: 2;
+}
+
+.IdentifiyBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.VideoBg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
+}
+
+.IdentifiyContent {
+  z-index: 10;
+  max-width: 800px;
+  position: absolute;
+  background-color: transparent;
+}
+
+.containerLogin {
+  background: #fff;
+  width: 500px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 960px) {
+  .containerLogin {
+    width: 300px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+.containerLogin form .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 30px 0;
+  position: relative;
+}
+.containerLogin form .title:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #07c 0%, #efa61f94 100%);
+}
+.containerLogin form .input-box {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.containerLogin form .input-box input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+.containerLogin form .underline::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.containerLogin form .underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #07c 0%, #efa61f94 100%);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+.containerLogin form .input-box input:focus ~ .underline::after,
+.containerLogin form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.containerLogin form .button {
+  margin: 40px 0 20px 0;
+}
+.containerLogin .input-box input[type="submit"] {
+  background: linear-gradient(to right, #07c 0%, #07c 100%);
+  font-size: 17px;
+  color: #fff;
+  border: 2px solid #07c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.containerLogin .input-box input[type="submit"]:hover {
+  letter-spacing: 1px;
+  border: 2px solid #07c;
+  background: transparent;
+  color: #07c;
+}
+.containerLogin .option {
+  font-size: 16px;
+  text-align: center;
+}
+
+.toregister {
+  text-decoration: none;
+  color: #07c;
+}

@@ -1,0 +1,21 @@
+#auth_bloc {
+  display: flex;
+  align-items: center;
+}
+#user_info_navbar {
+  position: absolute;
+  border: 3px solid #73ad21;
+  display: none;
+  color: "black";
+}
+#user_info_navbar h3 {
+  color: #0000 !important;
+}
+#user_info_bloc {
+  position: relative;
+  z-index: 1;
+}
+#user_info_bloc:hover #user_info_navbar {
+  display: block;
+  float: right;
+}
